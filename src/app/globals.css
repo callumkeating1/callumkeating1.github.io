@@ -1,42 +1,85 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.menu {
+  background: linear-gradient(135deg, #436fbc, #578ae4, #739ce2);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-size: 300% 300%;
+  animation: gradientShift 5000ms ease infinite;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.menuText {
+  color: #c05813;
+  text-decoration: none;
+  padding: 4px;
+  background: linear-gradient(135deg, #7bc0ee, #b9dcf3, #9ac2dd);
+  border-radius: 4px;
+  margin: 0 5px;
+  background-size: 200%;
+  background-position: left center;
+  transition: background-position 1s ease, transform 0.3s ease, color 1.5s ease-in-out;
+  margin: 0 10px;
+}
+.menuText.selected {
+  outline: #1453c0;
+  outline-style: solid;
+  outline-width: 4px;
+}
+
+.menuText:hover {
+  color: #db905d;
+  background-position: right center; 
+}
+.projectsDiv {
+  background : linear-gradient(135deg, #8015c7,#aa69e7,#5c00f0);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  background-size: 200%;
+  background-position: left center;
+  transition: background-position 1s ease;
+  
+}
+.projectsDiv h2  {
+  color: #dac2f0;
+}
+.projectsDiv:hover {
+  background-position: right bottom;
+  animation: size 500ms ease-in-out;
+}
+.projectsDiv:hover h2 {
+  transition: color 0.5s ease;
+  color: #1453c0;
+}
+.downloadButton {
+  background: #4e87e9;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+/* --- ANIMATIONS --- */
+
+@keyframes gradientShift {
+  0% {
+    background-position: left center;
+  }
+  50% {
+    background-position: right center;
+  }
+  100% {
+    background-position: left center;
   }
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes size {
+  20% {
+    scale:99%;
+  }
+  50% {
+    scale: 101%;
+  }
+  100% {
+    scale: 100%;
   }
 }

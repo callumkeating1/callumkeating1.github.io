@@ -1,0 +1,14 @@
+{
+    "projects": [
+        {
+            "name": "main website",
+            "desc": "the website your on right now!",
+            "downloadButton": "main website link"
+        },
+        {
+            "name": "resume",
+            "desc": "my resume, has all my projects along with extra details regarding them",
+            "downloadButton":"resume website link"
+        }
+    ]
+}
