@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Projects } from "../../components/projects"
 
